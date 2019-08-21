@@ -587,12 +587,12 @@ class RigolScope():
         print('Start Reading')
         self.Read_Ch1 = np.array(self.Get_Buffer_Ch1())
         self.Read_Ch2 = np.array(self.Get_Buffer_Ch2())
-        self.Read_Ch3 = np.array(self.Get_Buffer_Ch3())
-        self.Read_Ch4 = np.array(self.Get_Buffer_Ch4())
+#         self.Read_Ch3 = np.array(self.Get_Buffer_Ch3())
+#         self.Read_Ch4 = np.array(self.Get_Buffer_Ch4())
         self.Memory_Depth = self.Read_Memory_Depth()
         self.Sample_Rate = self.Read_Sample_Rate()
         print('Finish Reading')
-        return self.Read_Ch3, self.Read_Ch4, self.Memory_Depth, self.Sample_Rate
+        return self.Read_Ch1, self.Read_Ch2, self.Memory_Depth, self.Sample_Rate
 #         return self.Read_Ch1, self.Read_Ch2, self.Read_Ch3, self.Read_Ch4, self.Memory_Depth, self.Sample_Rate
 
     
